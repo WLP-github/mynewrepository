@@ -1,0 +1,17 @@
+<?php
+
+namespace FDA\Exports;
+
+use FDA\User;
+use Maatwebsite\Excel\Concerns\FromCollection;
+
+class ExportUsers implements FromCollection
+{
+    /**
+    * @return \Illuminate\Support\Collection
+    */
+    public function collection()
+    {
+        return User::all();
+    }
+}
